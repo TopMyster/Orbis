@@ -1,7 +1,10 @@
-export default function Preview() {
+export default function Preview({ value }) {
     return (
-        <div className="preview-container">
-            <h1>Preview</h1>
-        </div>
+        <iframe
+            srcDoc={value}
+            title="Preview"
+            sandbox="allow-scripts"
+            style={{ width: '100%', height: '100%', border: 'none' }}
+        />
     )
 }
